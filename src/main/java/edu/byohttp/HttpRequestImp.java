@@ -1,7 +1,7 @@
 package edu.byohttp;
 
 import java.io.InputStream;
-import java.util.Map;
+import java.util.HashMap<K,V>;
 import java.io.DataInputStream;
 
 public class HttpRequestImp implements HttpRequest{
@@ -13,11 +13,7 @@ public class HttpRequestImp implements HttpRequest{
 
     public HttpRequestImp(InputStream dataStream){
         this.header = new HashMap<>();
-
-        while((data = dataStream.read() != -1)){
-
-        }
-
+        this.header.put("test","test"):
         this.version = "test";
         this.resource = "test";
         this.method = "test";
