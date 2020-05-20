@@ -1,0 +1,21 @@
+import java.util.HashMap;
+
+public interface VerbHttpMethod {
+
+    public HttpMethod getInstance(String verb);
+    public void appendHttpMethod(String verb, HttpMethod method);
+}
+
+public class FactoryMethodHttp implements VerbHttpMethod{
+
+    final private HashMap<String,HttpMethod> verbs = new HashMap<String, HttpMethod>();
+
+    @Override
+    public HttpMethod getInstance(String verb) {
+        return verbs.get(verb);
+    }
+
+    public void appendHttpMethod(String verb, HttpMethod method){
+        verbs.put(verb,method);
+    }
+}
