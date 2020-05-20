@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.util.Map;
 import java.io.DataInputStream;
 
-public class HttpRequestImp {
+public class HttpRequestImp implements HttpRequest{
 
     private String method;
     private String resource;
