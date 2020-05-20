@@ -19,11 +19,10 @@ public class HttpRequestImp implements HttpRequest{
         this.method = "test";
 
     }
-    private Void inputStreamReader(InputStream stream){
+    private void inputStreamReader(InputStream stream){
         BufferedInputStream buffer = new BufferedInputStream(stream);
         DataInputStream data = new DataInputStream(buffer);
     }
-
     public String getMethod() {
         return this.method;
     }
